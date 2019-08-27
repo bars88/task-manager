@@ -1,0 +1,24 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 1px solid var(--g-color-gray-dark);
+  border-radius: 2.5em;
+  padding: 1.5em;
+  box-shadow: var(--g-box-shadow-400-down);
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form__link {
+  font: var(--g-font-small);
+  margin-top: 0.5em;
+}
+
+.login-form__button {
+  width: 100%;
+}
+
+.login-form__input {
+  width: 100%;
+}

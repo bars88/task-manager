@@ -1,5 +1,120 @@
 :root {
+  --g-sidebar-width: 65px;
+  --g-sidebar-background: linear-gradient(#3a3a3a, #212121);
+  --g-header-height: 56px;
+  --g-input-height: 2.143em;
 
+  /* base */
+  --g-color-light: #fff;
+  --g-color-dark: #000;
+
+  /* gray */
+
+  --g-color-gray-lightest: #f2f4f7;
+  --g-color-gray-lighter: #e6eaf0;
+  --g-color-gray-light: #d2d8e2;
+  --g-color-gray: #9fa9b9;
+  --g-color-gray-dark: #616a78;
+  --g-color-gray-darker: #333;
+
+  /* beige */
+
+  --g-color-beige: #f2d8ce;
+  --g-color-beige-light: #ffede6;
+
+  /* blue */
+
+  --g-color-blue: #3c9cda;
+  --g-color-blue-1: #309afe;
+  --g-color-blue-light: #c4e1f3;
+  --g-color-blue-lighter: #e6f5ff;
+
+  /* green */
+
+  --g-color-green: #36b37e;
+  --g-color-green-light: #bae6d3;
+  --g-color-green-lighter: #e8fff5;
+
+  /* palette */
+
+  --g-color-primary: #ff4800;
+  --g-color-danger: #b33200;
+  --g-color-gold: #f6a43f;
+  --g-color-gold-light: #f2e1c2;
+  --g-color-gold-lighter: #fff6e6;
+  --g-color-badge-success: #bff5cc;
+  --g-color-badge-success-text: #1d4a35;
+  --g-color-badge-danger: #fbd0cf;
+  --g-color-badge-danger-text: #922522;
+  --g-color-badge-running: #e8d1ff;
+  --g-color-badge-running-text: #3c2b72;
+  --g-color-badge-warning: #fde8be;
+  --g-color-badge-warning-text: #712d19;
+  --g-color-badge-primary: #d2eeff;
+  --g-color-badge-primary-text: #233a5b;
+
+  /* table background with opacity */
+  --g-color-hower-05: hsla(216, 25%, 45%, 0.05);
+
+  /* typography */
+
+  --g-font-biggest: normal normal 400 36px/1 'Roboto', sans-serif;
+  --g-font-bigger: normal normal 400 24px/1 'Roboto', sans-serif;
+  --g-font-big: normal normal 400 18px/1 'Roboto', sans-serif;
+  --g-font: normal normal 400 16px/1 'Roboto', sans-serif;
+  --g-font-small: normal normal 400 14px/1 'Roboto', sans-serif;
+  --g-font-smaller: normal normal 400 12px/1 'Roboto', sans-serif;
+  --g-font-smallest: normal normal 400 10px/1 'Roboto', sans-serif;
+
+  /* font size */
+  --g-font-input: var(--g-font-small);
+  --g-font-button: var(--g-font-small);
+
+  /* line height */
+
+  --g-text-lh-biggest: 32px;
+  --g-text-lh-bigger: 24px;
+  --g-text-lh-big: 18px;
+  --g-text-lh: 16px;
+
+  /* indents */
+
+  --g-indent-1: 32px;
+  --g-indent-2: 24px;
+  --g-indent-3: 16px;
+  --g-indent-4: 8px;
+
+  /* z-index */
+  --z-index-hidden: -1;
+  --z-index-base: 1;
+  --z-index-active: 5;
+  --z-index-focus: 10;
+  --z-index-fixed: 15;
+  --z-index-permanent: 20;
+
+  /* shadows */
+  --g-box-shadow-100-up: 0 -1px 1px 0 rgba(9, 30, 66, 0.25);
+  --g-box-shadow-100-down: 0 1px 1px 0 rgba(9, 30, 66, 0.25);
+  --g-box-shadow-200-left: -4px 4px 8px -4px rgba(9, 30, 66, 0.25);
+  --g-box-shadow-200-up: 0 -4px 7px -2px rgba(9, 30, 66, 0.25);
+  --g-box-shadow-200-down: 0 4px 8px -2px rgba(9, 30, 66, 0.25);
+  --g-box-shadow-200-double: 0 4px 8px -2px rgba(9, 30, 66, 0.25),
+    0 0 1px 0 rgba(9, 30, 66, 0.31);
+  --g-box-shadow-300-left: -8px 8px 16px -4px rgba(9, 30, 66, 0.25);
+  --g-box-shadow-300-right: 8px 0 16px -4px rgba(9, 30, 66, 0.25);
+  --g-box-shadow-300-down: 0 8px 16px -4px rgba(9, 30, 66, 0.25);
+  --g-box-shadow-400-down: 0 12px 24px -6px rgba(9, 30, 66, 0.25);
+  --g-box-shadow-400-right: 8px 8px 16px -4px rgba(9, 30, 66, 0.25);
+  --g-box-shadow-500-down: 0 20px 32px -8px rgba(9, 30, 66, 0.25);
+
+  /* toast-colors */
+  --g-toast-color-success: #38b36a;
+  --g-toast-color-warning: #ffa306;
+  --g-toast-color-danger: #ff4800;
+
+  /* border-radius */
+  --g-border-radius-small: 2px;
+  --g-border-radius-large: 6px;
 }
 
 html {

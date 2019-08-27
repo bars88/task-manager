@@ -1,0 +1,13 @@
+.input {
+  margin: 1em 0.5em !important;
+  position: relative !important;
+}
+
+.input:hover .MuiInput-underline:before{
+  border-bottom-color: rgba(0, 0, 0, 0.42) !important;
+}
+
+.input > p {
+  position: absolute;
+  top: 3.7em;
+}

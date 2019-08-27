@@ -1,0 +1,5 @@
+.link {
+  text-decoration: none;
+  color: var(--g-color-blue);
+  display: flex;
+}
