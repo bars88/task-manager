@@ -1,14 +1,17 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import LoginPage from '../../../pages/LoginPage';
-import RegistrationPage from '../../../pages/RegistrationPage';
+import { withRouter } from 'react-router-dom';
+import LoginRouter from '../LoginRouter';
+import MainRouter from '../MainRouter';
+import { getToken } from '../../utils/getToken';
 
 const AppRouter = () => (
-  <Switch>
-    <Route path={'/login'} component={LoginPage}/>
-    <Route path={'/registration'} component={RegistrationPage} />
-    <Redirect to={'/login'} />
-  </Switch>
+  <>
+    {!!getToken() ? (
+      <MainRouter />
+    ) : (
+      <LoginRouter />
+    )}
+  </>
 );
 
-export default AppRouter;
+export default withRouter(AppRouter);

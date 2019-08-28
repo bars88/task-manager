@@ -4,11 +4,20 @@ import {
   USER_LOGIN_ENDPOINT,
   userRegistrationTypes,
   USER_REGISTRATION_ENDPOINT,
+  USER_LOGOUT_ENDPOINT,
+  userLogoutTypes,
 } from './constants';
 import { REQUEST } from '../../utils/constTypes';
 import { api } from '../../utils/api';
 import { httpMethods } from '../../constants';
 import { userRegistrationActions, userLoginActions } from './actions';
+import { push } from 'connected-react-router';
+
+function* putUserData(data, action) {
+  localStorage.setItem('token', data.token);
+  yield put(action.success(data.user));
+  yield put(push('/main'));
+};
 
 function* userLogin(action) {
   try {
@@ -18,8 +27,7 @@ function* userLogin(action) {
       data: action.payload,
     });
     if (status === 200) {
-      localStorage.setItem('token', data.token);
-      yield put(userLoginActions.success(data.user));
+      yield call(putUserData, data, userLoginActions);
     } else {
       console.warn('Something went wrong');
     };
@@ -36,10 +44,24 @@ function* userRegistration(action) {
       data: action.payload,
     })
     if (status === 201) {
-      localStorage.setItem('token', data.token);
-      yield put(userRegistrationActions.success(data.user));
+      yield call(putUserData, data, userRegistrationActions);
     } else {
       console.warn('Something went wrong');
+    }
+  } catch (error) {
+    console.warn(error);
+  }
+}
+
+function* userLogout() {
+  try {
+    const { status } = yield call(api, {
+      method: httpMethods.POST,
+      url: USER_LOGOUT_ENDPOINT,
+    })
+    if (status === 200) {
+      localStorage.removeItem('token');
+      yield put(push('/login'));
     }
   } catch (error) {
     console.warn(error);
@@ -50,5 +72,6 @@ export default function* userSaga() {
   yield all([
     takeEvery(userLoginTypes[REQUEST], userLogin),
     takeEvery(userRegistrationTypes[REQUEST], userRegistration),
+    takeEvery(userLogoutTypes[REQUEST], userLogout),
   ]);
 };

@@ -11,11 +11,14 @@ export const userFormFields = {
 // endpoints
 export const USER_LOGIN_ENDPOINT = '/users/login';
 export const USER_REGISTRATION_ENDPOINT = '/users';
+export const USER_LOGOUT_ENDPOINT = '/users/logout';
 
 // types
 const USER_LOGIN = 'USER_LOGIN';
 const USER_REGISTRATION = 'USER_REGISTRATION';
+const USER_LOGOUT = 'USER_LOGOUT';
 
 // constants
 export const userLoginTypes = createConstants(USER_LOGIN);
 export const userRegistrationTypes = createConstants(USER_REGISTRATION);
+export const userLogoutTypes = createConstants(USER_LOGOUT);

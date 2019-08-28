@@ -1,0 +1,36 @@
+.side-bar {
+  display: flex;
+  max-width: 25%;
+  height: 100%;
+  flex-direction: column;
+  box-shadow: var(--g-box-shadow-300-right);
+  font: var(--g-font-small);
+}
+
+.side-bar__list {
+  flex-grow: 1;
+}
+
+.side-bar__logout {
+  display: flex;
+  margin: 0.5em 0 !important;
+  border-radius: 0 !important;
+  width: 100%;
+  color: var(--g-color-gray-dark) !important;
+  align-items: center;
+  font: var(--g-font-small);
+}
+
+.side-bar__logout-text {
+  color: var(--g-color-gray-dark);
+  margin: 0.5em;
+}
+
+.side-bar__link {
+  color: var(--g-color-gray-dark);
+}
+
+.side-bar__icon {
+  color: var(--g-color-gray-dark) !important;
+  margin-right: 0.5em;
+}

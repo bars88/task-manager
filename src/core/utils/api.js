@@ -7,7 +7,7 @@ export const api = axios.create({
 api.interceptors.request.use(
   config => {
     config.baseURL = 'http://localhost:3000';
-    const token = localStorage.getItem('ebala');
+    const token = localStorage.getItem('token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     } else {
