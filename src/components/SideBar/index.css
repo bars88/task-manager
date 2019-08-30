@@ -5,6 +5,7 @@
   flex-direction: column;
   box-shadow: var(--g-box-shadow-300-right);
   font: var(--g-font-small);
+  padding: 1em 0.5em 0 0;
 }
 
 .side-bar__list {
@@ -12,6 +13,10 @@
 }
 
 .side-bar__logout {
+  margin-bottom: 2em;
+}
+
+.side-bar__button {
   display: flex;
   margin: 0.5em 0 !important;
   border-radius: 0 !important;
@@ -33,4 +38,9 @@
 .side-bar__icon {
   color: var(--g-color-gray-dark) !important;
   margin-right: 0.5em;
+}
+
+.side-bar__menu .MuiMenu-paper {
+  top: 46.5em !important;
+  max-height: 7em;
 }

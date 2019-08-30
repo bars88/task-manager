@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import SideBar from '../../components/SideBar';
 import PersonIcon from '@material-ui/icons/Person';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import './index.css';
+import ProfilePage from '../ProfilePage';
+import { getUserActions } from '../../core/modules/user/actions';
 
 const sideBarItems = [
   {
@@ -18,17 +21,26 @@ const sideBarItems = [
   },
 ];
 
-const MainPage = () => (
-  <div className="main-page">
-    <SideBar items={sideBarItems}/>
-    <div>
-    <Switch>
-      <Route path={'/main/profile'} />
-      <Route path={'/main/tasks'} />
-      <Redirect to={'/main/profile'} />
-    </Switch>
+const MainPage = ({ getUser }) => {
+  useEffect(() => {
+    getUser()
+  }, []);
+  return (
+    <div className="main-page">
+      <SideBar items={sideBarItems}/>
+      <section className="main-page__content">
+        <Switch>
+          <Route path={'/main/profile'} component={ProfilePage} />      
+          <Route path={'/main/tasks'} />
+          <Redirect to={'/main/profile'} />
+        </Switch>
+      </section>
     </div>
-  </div>
-);
+  );
+};
 
-export default MainPage;
+export default connect(
+  null,
+  {
+    getUser: getUserActions.request,
+  })(MainPage);

@@ -1,0 +1,8 @@
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form__input .Mui-disabled {
+  color: var(--g-color-gray-dark) !important;
+}

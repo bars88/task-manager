@@ -1,0 +1,12 @@
+.upload-input {
+  display: none;
+}
+
+.upload-button {
+  color: var(--g-color-gray-dark) !important;
+  line-height: normal;
+}
+
+.upload-button .MuiButton-label > label {
+  cursor: pointer;
+}

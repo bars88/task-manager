@@ -1,9 +1,9 @@
 import React from 'react';
 import { Form, Field } from 'formik';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
+import Input from '../../../components/Input';
+import Button from '../../../components/Button';
 import './index.css';
-import Link from '../../components/Link';
+import Link from '../../../components/Link';
 
 const LoginForm = ({
   submitForm,

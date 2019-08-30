@@ -1,0 +1,8 @@
+.profile-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-buttons__button {
+  color: var(--g-color-gray-dark) !important;
+}

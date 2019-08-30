@@ -1,0 +1,13 @@
+.profile {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  min-height: 40%;
+  border-radius: 5px;
+  box-shadow: var(--g-box-shadow-200-double);
+  padding: 2em;
+}
+
+.profile__avatar {
+  align-self: center;
+}

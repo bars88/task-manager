@@ -13,6 +13,7 @@ const Input = ({ className, onChange, onBlur, form, field, ...props }) => {
   const showError = form.touched[field.name] && Object.keys(form.errors).includes(field.name);
   return (
     <TextField
+      value={field.value}
       onChange={onInputChange}
       onBlur={onInputBlur}
       className={classnames('input', className)}

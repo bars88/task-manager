@@ -1,0 +1,9 @@
+.avatar.MuiAvatar-colorDefault {
+  background-color: var(--g-color-green-light);
+}
+
+.avatar.MuiAvatar-root {
+  width: 4em;
+  height: 4em;
+  font: var(--g-font-biggest)
+}
