@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import { connect } from 'react-redux';
 import { userRegistrationActions } from '../../core/modules/user/actions';
 import './index.css';
-import RegistrationForm from '../../composed-components/RegistrationForm';
+import RegistrationForm from '../../composed-components/Registration/RegistrationForm';
 import userValidation from '../../core/modules/user/validation';
 
 const registrationInitialValues = {

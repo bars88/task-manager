@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Formik } from 'formik';
-import LoginForm from '../../composed-components/LoginForm';
+import LoginForm from '../../composed-components/Login/LoginForm';
 import { userLoginActions } from '../../core/modules/user/actions';
 import './index.css';
 import Page from '../../components/Page';
